@@ -1,4 +1,6 @@
 import "@/assets/styles/globals.css";
+import Footer from "@/Components/Footer";
+import Navbar from "@/Components/Navbar";
 
 export const metadata = {
   title: "property booking",
@@ -10,7 +12,9 @@ const MainLayout = ({ children }) => {
   return (
     <html>
       <body>
+        <Navbar/>
         <main>{children}</main>
+        <Footer/>
       </body>
     </html>
   );

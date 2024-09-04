@@ -1,7 +1,13 @@
-import Navbar from "@/Components/Navbar";
-import Link from "next/link";
+import Hero from "@/Components/Hero";
+import InfoBoxs from "@/Components/InfoBoxes";
+
 const HomePage = () => {
-  return <Navbar />;
+  return (
+    <>
+      <Hero />
+      <InfoBoxs />
+    </>
+  );
 };
 
 export default HomePage;
