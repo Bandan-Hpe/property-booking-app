@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setProfileMenuOpen] = useState(false);
-  const [isLoggedIn, setLoggedin] = useState(false);
+  const [isLoggedIn, setLoggedin] = useState(true);
   return (
     <nav className="bg-blue-700 border-b border-blue-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -56,7 +56,7 @@ const Navbar = () => {
               <div className="flex space-x-2">
                 <Link
                   href="/"
-                  className={`  text-white  rounded-md px-3 py-2 ${
+                  className={`    rounded-md px-3 py-2 ${
                     pathname === "/"
                       ? "bg-white text-blue-700"
                       : "text-white hover:bg-white hover:text-blue-700"
@@ -65,19 +65,19 @@ const Navbar = () => {
                   Home
                 </Link>
                 <Link
-                  href="/properties"
-                  className={`  text-white  rounded-md px-3 py-2 ${
+                  href="/properties" 
+                  className={`   rounded-md px-3 py-2 ${
                     pathname === "/properties"
                       ? "bg-white text-blue-700"
                       : "text-white hover:bg-white hover:text-blue-700"
                   }`}
                 >
                   Properties
-                </Link>
+                </Link>  
                 {isLoggedIn && (
                   <Link
                     href="/properties/add"
-                    className={`  text-white  rounded-md px-3 py-2 ${
+                    className={`    rounded-md px-3 py-2 ${
                       pathname === "/properties/add"
                         ? "bg-white text-blue-700"
                         : "text-white hover:bg-white hover:text-blue-700"
@@ -92,7 +92,7 @@ const Navbar = () => {
 
           <div className="hidden md:block md:ml-6">
             <div className="flex items-center">
-              <button className="flex items-center text-blue-700 bg-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2">
+              <button className="flex items-center text-blue-700 bg-white hover:bg-blue-900 hover:text-white rounded-md px-3 py-2">
                 <FaGoogle className="text-blue-700 mr-2" />
                 <span>Login or Register</span>
               </button>
@@ -218,7 +218,7 @@ const Navbar = () => {
             )}
 
             {isLoggedIn && (
-              <button className="flex items-center text-blue-700 bg-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-5">
+              <button className="flex items-center text-blue-700 bg-white hover:bg-blue-900 hover:text-white rounded-md px-3 py-2 my-5">
                 <i className="fa-brands fa-google mr-2"></i>
                 <span>Login or Register</span>
               </button>

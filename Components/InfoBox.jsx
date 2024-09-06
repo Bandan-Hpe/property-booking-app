@@ -11,7 +11,7 @@ const InfoBox = ({
       <p className={`mt-2 mb-4 ${textColor}`}>{children}</p>
       <a
         href={buttonText.link}
-        className={`inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700`}
+        className={`inline-block bg-blue-500 text-white rounded-lg px-4 py-2 hover:bg-gray-700`}
       >
         {buttonText.text}{" "}
       </a>
