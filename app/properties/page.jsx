@@ -1,6 +1,10 @@
 import PropertyCard from "@/Components/PropertyCard";
-import properties from "@/properties.json";
-const Property = () => {
+import connectDB from "@/config/database";
+import Property from "@/models/Property";
+const PropertyPage = async() => {
+  await connectDB();
+  const properties = await Property.find({}).lean();
+  console.log(properties);
   return (
     <section className="px-4 py-6">
       <div className="conteiner-xl lg:container m-auto px-4 py-6">
@@ -18,4 +22,4 @@ const Property = () => {
   );
 };
 
-export default Property;
+export default PropertyPage;
