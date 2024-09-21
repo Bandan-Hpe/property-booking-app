@@ -1,6 +1,7 @@
 import "@/assets/styles/globals.css";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
+import AuthProvider from "@/Components/AuthProvider";
 
 export const metadata = {
   title: "property booking",
@@ -10,13 +11,15 @@ export const metadata = {
 };
 const MainLayout = ({ children }) => {
   return (
-    <html>
-      <body>
-        <Navbar/>
-        <main>{children}</main>
-        <Footer/>
-      </body>
-    </html>
+    <AuthProvider>
+      <html>
+        <body>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </AuthProvider>
   );
 };
 
